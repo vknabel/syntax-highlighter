@@ -1,187 +1,203 @@
 {
-    "name": "syntax-highlighter",
-    "displayName": "Syntax Highlighter",
-    "description": "Syntax highlighting based on Tree-sitter",
-    "homepage": "https://github.com/EvgeniyPeshkov/syntax-highlighter",
-    "version": "0.5.1",
-    "publisher": "evgeniypeshkov",
-    "license": "MIT",
-    "icon": "images/syntax.png",
-    "galleryBanner": {
-        "color": "#263238",
-        "theme": "dark"
-    },
-    "repository": {
-        "url": "https://github.com/EvgeniyPeshkov/syntax-highlighter"
-    },
-    "author": {
-        "name": "Evgeniy Peshkov",
-        "email": "peshkov.e@outlook.com"
-    },
-    "categories": [
-        "Programming Languages",
-        "Themes",
-        "Other"
-    ],
-    "keywords": [
-        "Syntax",
-        "Highlighter",
-        "Highlight",
-        "Highlighting",
-        "Coloring",
-        "Tree-Sitter",
-        "Parser",
-        "C",
-        "C++",
-        "CPP",
-        "Python",
-        "TypeScript",
-        "TS",
-        "TypeScriptReact",
-        "TSX",
-        "JavaScript",
-        "JS",
-        "Go",
-        "Rust",
-        "Php",
-        "Ruby",
-        "ShellScript",
-        "Bash",
-        "OCaml",
-        "Lua",
-        "D",
-    ],
-    "activationEvents": [
-        "onLanguage:c",
-        "onLanguage:cpp",
-        "onLanguage:python",
-        "onLanguage:typescript",
-        "onLanguage:typescriptreact",
-        "onLanguage:javascript",
-        "onLanguage:go",
-        "onLanguage:rust",
-        "onLanguage:php",
-        "onLanguage:ruby",
-        "onLanguage:shellscript",
-        "onLanguage:ocaml",
-        "onLanguage:lua",
-        "onLanguage:d"
-    ],
-    "main": "./out/extension.js",
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "vscode:package": "node ./node_modules/.bin/vsce package",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./scripts/build.js"
-    },
-    "engines": {
-        "vscode": "^1.46.0"
-    },
-    "dependencies": {
-        "jsonc-parser": "^2.2.1",
-        "web-tree-sitter": "^0.19.1"
-    },
-    "devDependencies": {
-        "@types/node": "^13.7.2",
-        "@types/vscode": "^1.46.0",
-        "ovsx": "0.1.0-next.a9154dc",
-        "tree-sitter": "^0.19.0",
-        "tree-sitter-bash": "^0.19.0",
-        "tree-sitter-c": "^0.19.0",
-        "tree-sitter-cli": "^0.19.4",
-        "tree-sitter-cpp": "^0.19.0",
-        "tree-sitter-d": "github:cybershadow/tree-sitter-d",
-        "tree-sitter-go": "^0.19.1",
-        "tree-sitter-javascript": "^0.19.0",
-        "tree-sitter-lua": "^1.6.2",
-        "tree-sitter-ocaml": "^0.19.0",
-        "tree-sitter-php": "^0.19.0",
-        "tree-sitter-python": "^0.19.0",
-        "tree-sitter-ruby": "github:tree-sitter/tree-sitter-ruby#v0.19.0",
-        "tree-sitter-rust": "^0.19.1",
-        "tree-sitter-typescript": "^0.19.0",
-        "tslint": "^6.1.2",
-        "typescript": "^3.9.3",
-        "vsce": "^1.87.0"
-    },
-    "contributes": {
-        "semanticTokenTypes": [
-            {
-                "id": "punctuation",
-                "description": "Punctuation symbols"
-            }
+  "name": "syntax-highlighter",
+  "displayName": "Syntax Highlighter",
+  "description": "Syntax highlighting based on Tree-sitter",
+  "homepage": "https://github.com/EvgeniyPeshkov/syntax-highlighter",
+  "version": "0.5.1",
+  "publisher": "evgeniypeshkov",
+  "license": "MIT",
+  "icon": "images/syntax.png",
+  "galleryBanner": {
+    "color": "#263238",
+    "theme": "dark"
+  },
+  "repository": {
+    "url": "https://github.com/EvgeniyPeshkov/syntax-highlighter"
+  },
+  "author": {
+    "name": "Evgeniy Peshkov",
+    "email": "peshkov.e@outlook.com"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "Syntax",
+    "Highlighter",
+    "Highlight",
+    "Highlighting",
+    "Coloring",
+    "Tree-Sitter",
+    "Parser",
+    "C",
+    "C++",
+    "CPP",
+    "Python",
+    "TypeScript",
+    "TS",
+    "TypeScriptReact",
+    "TSX",
+    "JavaScript",
+    "JS",
+    "Go",
+    "Rust",
+    "Php",
+    "Ruby",
+    "ShellScript",
+    "Bash",
+    "OCaml",
+    "lithia",
+    "Lua",
+    "D"
+  ],
+  "activationEvents": [
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:python",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:javascript",
+    "onLanguage:go",
+    "onLanguage:rust",
+    "onLanguage:php",
+    "onLanguage:ruby",
+    "onLanguage:shellscript",
+    "onLanguage:ocaml",
+    "onLanguage:lithia",
+    "onLanguage:lua",
+    "onLanguage:d"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "vscode:package": "node ./node_modules/.bin/vsce package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./scripts/build.js"
+  },
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "dependencies": {
+    "jsonc-parser": "^2.2.1",
+    "web-tree-sitter": "^0.19.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.2",
+    "@types/vscode": "^1.46.0",
+    "ovsx": "0.1.0-next.a9154dc",
+    "tree-sitter": "^0.19.0",
+    "tree-sitter-bash": "^0.19.0",
+    "tree-sitter-c": "^0.19.0",
+    "tree-sitter-cli": "^0.19.4",
+    "tree-sitter-cpp": "^0.19.0",
+    "tree-sitter-d": "github:cybershadow/tree-sitter-d",
+    "tree-sitter-go": "^0.19.1",
+    "tree-sitter-javascript": "^0.19.0",
+    "tree-sitter-lithia": "git+https://github.com/vknabel/tree-sitter-lithia.git",
+    "tree-sitter-lua": "^1.6.2",
+    "tree-sitter-ocaml": "^0.19.0",
+    "tree-sitter-php": "^0.19.0",
+    "tree-sitter-python": "^0.19.0",
+    "tree-sitter-ruby": "github:tree-sitter/tree-sitter-ruby#v0.19.0",
+    "tree-sitter-rust": "^0.19.1",
+    "tree-sitter-typescript": "^0.19.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3",
+    "vsce": "^1.87.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "lithia",
+        "aliases": [
+          "Lithia",
+          "lithia"
         ],
-        "semanticTokenScopes": [
-            {
-                "scopes": {
-                    "punctuation": [
-                        "punctuation"
-                    ],
-                    "type.modification": [
-                        "storage.modifier"
-                    ]
-                }
-            }
-        ],
-        "configuration": {
-            "title": "{Syntax Highlighter} configuration",
-            "properties": {
-                "syntax.highlightComment": {
-                    "description": "Enable highlighting of comments",
-                    "type": "boolean",
-                    "default": true
-                },
-                "syntax.highlightLanguages": {
-                    "description": "Enabled languages",
-                    "type": "array",
-                    "default": [
-                        "c",
-                        "cpp",
-                        "python",
-                        "typescript",
-                        "typescriptreact",
-                        "javascript",
-                        "go",
-                        "rust",
-                        "php",
-                        "ruby",
-                        "shellscript",
-                        "ocaml",
-                        "lua",
-                        "d"
-                    ]
-                },
-                "syntax.highlightTerms": {
-                    "description": "Enabled terms",
-                    "type": "array",
-                    "default": [
-                        "type",
-                        "scope",
-                        "function",
-                        "variable",
-                        "number",
-                        "string",
-                        "comment",
-                        "constant",
-                        "directive",
-                        "control",
-                        "operator",
-                        "modifier",
-                        "punctuation"
-                    ]
-                },
-                "syntax.debugHover": {
-                    "description": "Show tool-tip with syntax scope on hover",
-                    "type": "boolean",
-                    "default": false
-                },
-                "syntax.debugDepth": {
-                    "description": "Depth of syntax scope in debug tools",
-                    "type": "integer",
-                    "default": -1
-                }
-            }
+        "extensions": [
+          ".lithia"
+        ]
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "punctuation",
+        "description": "Punctuation symbols"
+      }
+    ],
+    "semanticTokenScopes": [
+      {
+        "scopes": {
+          "punctuation": [
+            "punctuation"
+          ],
+          "type.modification": [
+            "storage.modifier"
+          ]
         }
+      }
+    ],
+    "configuration": {
+      "title": "{Syntax Highlighter} configuration",
+      "properties": {
+        "syntax.highlightComment": {
+          "description": "Enable highlighting of comments",
+          "type": "boolean",
+          "default": true
+        },
+        "syntax.highlightLanguages": {
+          "description": "Enabled languages",
+          "type": "array",
+          "default": [
+            "c",
+            "cpp",
+            "python",
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "go",
+            "rust",
+            "php",
+            "ruby",
+            "shellscript",
+            "ocaml",
+            "lua",
+            "lithia",
+            "d"
+          ]
+        },
+        "syntax.highlightTerms": {
+          "description": "Enabled terms",
+          "type": "array",
+          "default": [
+            "type",
+            "scope",
+            "function",
+            "variable",
+            "number",
+            "string",
+            "comment",
+            "constant",
+            "directive",
+            "control",
+            "operator",
+            "modifier",
+            "punctuation"
+          ]
+        },
+        "syntax.debugHover": {
+          "description": "Show tool-tip with syntax scope on hover",
+          "type": "boolean",
+          "default": false
+        },
+        "syntax.debugDepth": {
+          "description": "Depth of syntax scope in debug tools",
+          "type": "integer",
+          "default": -1
+        }
+      }
     }
+  }
 }
