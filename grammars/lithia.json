@@ -7,6 +7,7 @@
     "string_literal": "string",
     "escape_sequence": "string",
     "number_literal": "number",
+    "enum_case_reference": "type",
 
     "\"switch\"": "control",
 
@@ -44,9 +45,9 @@
     "\".\"": "punctuation",
     "\":\"": "punctuation",
 
-    "\"True\"": "variable.readonly.defaultLibrary",
-    "\"False\"": "variable.readonly.defaultLibrary",
-    "\"Bool\"": "variable.readonly.defaultLibrary"
+    "\"True\"": "constant",
+    "\"False\"": "constant",
+    "\"Bool\"": "constant"
   },
 
   "complexTerms": ["identifier"],
@@ -55,16 +56,17 @@
     "import_declaration > identifier": "macro",
     "package_declaration > identifier": "namespace",
     "data_declaration > identifier": "type",
+    "data_property_value > identifier": "variable",
+    "data_property_function > identifier": "function",
     "enum_declaration > identifier": "type",
     "function_declaration > identifier": "function",
     "let_declaration > identifier": "variable",
     "member_access > identifier": "variable",
     "switch_expression > identifier": "type",
     "switch_case > identifier": "type",
-    "invocation_expression > identifier[0]": "function",
+    "complex_invocation_expression > identifier[0]": "function",
+    "simple_invocation_expression > identifier[0]": "function",
     "invocation_expression > identifier": "variable",
-    "enum_case_reference": "type",
-    "data_property > identifier[0]": "function",
-    "data_property > identifier": "variable"
+    "parameter_list > identifier": "variable"
   }
 }
