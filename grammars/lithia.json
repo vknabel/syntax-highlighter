@@ -9,7 +9,8 @@
     "number_literal": "number",
     "enum_case_reference": "type",
 
-    "\"switch\"": "control",
+    "\"type\"": "control",
+    "\"extern\"": "control",
 
     "\"data\"": "control",
     "\"enum\"": "control",
@@ -56,6 +57,7 @@
     "import_declaration > identifier": "macro",
     "package_declaration > identifier": "namespace",
     "data_declaration > identifier": "type",
+    "extern_declaration > identifier": "type",
     "data_property_value > identifier": "variable",
     "data_property_function > identifier": "function",
     "enum_declaration > identifier": "type",
