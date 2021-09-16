@@ -15,7 +15,7 @@
     "\"data\"": "control",
     "\"enum\"": "control",
     "\"import\"": "control",
-    "\"package\"": "control",
+    "\"module\"": "control",
     "\"func\"": "control",
 
     "\"+\"": "operator",
@@ -53,7 +53,7 @@
 
   "complexScopes": {
     "import_declaration > identifier": "macro",
-    "package_declaration > identifier": "namespace",
+    "module_declaration > identifier": "namespace",
     "data_declaration > identifier": "type",
     "extern_declaration > identifier[0]": "constant",
     "data_property_value > identifier": "variable",
